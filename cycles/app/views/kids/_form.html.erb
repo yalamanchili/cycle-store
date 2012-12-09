@@ -1,0 +1,37 @@
+<%= form_for(@kid) do |f| %>
+  <% if @kid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this kid from being saved:</h2>
+
+      <ul>
+      <% @kid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :products_name %><br />
+    <%= f.text_field :products_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cycle_weight %><br />
+    <%= f.text_field :cycle_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

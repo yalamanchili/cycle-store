@@ -1,0 +1,31 @@
+<h1>Listing boys</h1>
+
+<table>
+  <tr>
+    <th>Product name</th>
+    <th>Cycle weight</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @boys.each do |boy| %>
+  <tr>
+    <td><%= boy.product_name %></td>
+    <td><%= boy.cycle_weight %></td>
+    <td><%= boy.description %></td>
+    <td><%= image_tag(boy.image_url, :width=>75, :height=>75) %></td>
+    <td><%= boy.price %></td>
+    <td><%= link_to 'Show', boy %></td>
+    <td><%= link_to 'Edit', edit_boy_path(boy) %></td>
+    <td><%= link_to 'Destroy', boy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Boy', new_boy_path %>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cycles</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<script type="text/javascript" src="https://facebook.com/">
+<script type="text/javascript" src="https://twitter.com/">
+</script>
+<body>
+
+<div id='header'>
+<!-- Header Image Displayes here -->
+</div>
+<div id='menu'>
+<!-- Header Image Displayes here -->
+<div id="navbar">
+			<ul>
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/boys">Boys</a></li>
+			<li><a href="/girls">Girls</a></li>
+			<li><a href="/kids">Kids</a></li>
+			<li><a href="/aboutus">About us</a></li>
+			<li><a href="/contactus">Contact us</a></li>
+			</ul>
+		</div>
+</div>
+<div id='container'>
+<div id='content'>
+		<%= yield %>
+</div>
+
+   
+	
+	<div id='first-column'>
+        <p>
+           <a href="https://facebook.com/">Facebook</a>.</p>
+         <p>
+          <li><a href="/user_page">Twitter</a></li>.</p>
+</div>
+	
+</div>
+</div>
+<div id='footer'>
+<h6 class="footertext">All Rights Reserved</h6>
+</div>
+
+
+</body>
+</html>

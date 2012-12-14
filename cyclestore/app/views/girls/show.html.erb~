@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product name:</b>
+  <%= @girl.product_name %>
+</p>
+
+<p>
+  <b>Cycle weight:</b>
+  <%= @girl.cycle_weight %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @girl.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @girl.image_url %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @girl.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_girl_path(@girl) %> |
+<%= link_to 'Back', girls_path %>
